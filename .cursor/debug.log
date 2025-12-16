@@ -1,0 +1,38 @@
+{"location":"firebase.ts:4","message":"Firebase config check","data":{"hasApiKey":true,"hasAuthDomain":true,"hasProjectId":true},"timestamp":1765660320918,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:16","message":"Firebase init start","data":{"existingApps":0},"timestamp":1765660320922,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:19","message":"Firebase init success","data":{"appId":"legalkraft-90741"},"timestamp":1765660320922,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:42","message":"Auth init start","data":{},"timestamp":1765660320923,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"firebase.ts:45","message":"Auth init success","data":{},"timestamp":1765660320925,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660321051,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":false,"loading":true},"timestamp":1765660321053,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"firebase.ts:4","message":"Firebase config check","data":{"hasApiKey":true,"hasAuthDomain":true,"hasProjectId":true},"timestamp":1765660322110,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:16","message":"Firebase init start","data":{"existingApps":0},"timestamp":1765660322112,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:19","message":"Firebase init success","data":{"appId":"legalkraft-90741"},"timestamp":1765660322113,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:42","message":"Auth init start","data":{},"timestamp":1765660322113,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"firebase.ts:45","message":"Auth init success","data":{},"timestamp":1765660322114,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660322115,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":false,"loading":true},"timestamp":1765660322115,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"firebase.ts:16","message":"Firebase init start","data":{"existingApps":0},"timestamp":1765660322578,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:4","message":"Firebase config check","data":{"hasApiKey":true,"hasAuthDomain":true,"hasProjectId":true},"timestamp":1765660322578,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:19","message":"Firebase init success","data":{"appId":"legalkraft-90741"},"timestamp":1765660322579,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"firebase.ts:42","message":"Auth init start","data":{},"timestamp":1765660322580,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"firebase.ts:45","message":"Auth init success","data":{},"timestamp":1765660322584,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660322912,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":false,"loading":true},"timestamp":1765660322912,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660322913,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":false,"loading":true},"timestamp":1765660322913,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dashboard/page.tsx:30","message":"Dashboard useEffect","data":{"hasUser":false},"timestamp":1765660322931,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"auth-context.tsx:20","message":"AuthProvider useEffect start","data":{},"timestamp":1765660322932,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:32","message":"onAuthStateChanged subscribed","data":{},"timestamp":1765660322933,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"dashboard/page.tsx:30","message":"Dashboard useEffect","data":{"hasUser":false},"timestamp":1765660322943,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"auth-context.tsx:20","message":"AuthProvider useEffect start","data":{},"timestamp":1765660322943,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:32","message":"onAuthStateChanged subscribed","data":{},"timestamp":1765660322943,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:23","message":"onAuthStateChanged callback","data":{"hasUser":true,"userId":"5uY5HkaWkoMb4sj9VCnDQVr49Ts1"},"timestamp":1765660323413,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660323414,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":true,"loading":false},"timestamp":1765660323415,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:16","message":"AuthProvider render","data":{},"timestamp":1765660323416,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"auth-context.tsx:47","message":"AuthProvider render return","data":{"user":true,"loading":false},"timestamp":1765660323417,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dashboard/page.tsx:30","message":"Dashboard useEffect","data":{"hasUser":true,"userId":"5uY5HkaWkoMb4sj9VCnDQVr49Ts1"},"timestamp":1765660323429,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dashboard/page.tsx:36","message":"fetchData start","data":{"hasUser":true,"userId":"5uY5HkaWkoMb4sj9VCnDQVr49Ts1"},"timestamp":1765660323430,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dashboard/page.tsx:44","message":"getPatient call start","data":{"userId":"5uY5HkaWkoMb4sj9VCnDQVr49Ts1"},"timestamp":1765660323432,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dashboard/page.tsx:46","message":"getPatient response","data":{"success":true,"hasData":true,"isArray":false},"timestamp":1765660324133,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
