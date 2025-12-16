@@ -7,7 +7,6 @@ import { useLanguage } from '@/lib/language-context';
 import { getPatient, getPeople, createPatient, deletePerson, updatePatient } from '@/lib/api';
 import { Patient, Person } from '@/types';
 import { getDashboardTranslation } from '@/lib/dashboard-translations';
-import { generatePatientSetupUrl } from '@/lib/patient-mode';
 import Navbar from '@/components/Navbar';
 import PersonCard from '@/components/PersonCard';
 import PatientSetup from '@/components/PatientSetup';
@@ -30,9 +29,6 @@ export default function DashboardPage() {
     const [error, setError] = useState<string | null>(null);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [currentDate] = useState(() => new Date());
-    const [showSetupModal, setShowSetupModal] = useState(false);
-    const [setupUrl, setSetupUrl] = useState('');
-    const [copied, setCopied] = useState(false);
 
     // Redirect if not logged in
     useEffect(() => {
@@ -97,34 +93,6 @@ export default function DashboardPage() {
         } finally {
             setLoading(false);
         }
-    };
-
-    // Generate setup URL function
-    const handleGenerateSetupLink = () => {
-        if (!user || !patient || !patient.id) return;
-
-        const url = generatePatientSetupUrl(patient.id, user.uid, patient.name);
-        setSetupUrl(url);
-        setShowSetupModal(true);
-    };
-
-    // Copy function
-    const handleCopy = async () => {
-        if (!setupUrl) return;
-        try {
-            await navigator.clipboard.writeText(setupUrl);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        } catch (err) {
-            console.error('Failed to copy:', err);
-        }
-    };
-
-    // Share via WhatsApp
-    const handleWhatsAppShare = () => {
-        if (!setupUrl || !patient) return;
-        const message = `Setup YaadKar for ${patient.name}: ${setupUrl}`;
-        window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     const handleCreatePatient = async (name: string, age?: number, notes?: string, emergencyContactName?: string, emergencyContactPhone?: string) => {
@@ -329,19 +297,6 @@ export default function DashboardPage() {
                         </div>
                     </div>
 
-                    {/* Setup Patient Phone Button */}
-                    {patient && (
-                        <div className="mb-6 animate-fade-in-up" style={{ animationDelay: '0.03s' }}>
-                            <button
-                                onClick={handleGenerateSetupLink}
-                                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded-xl transition-colors font-medium"
-                            >
-                                <Icon name="smartphone" size={18} />
-                                <span>Setup Patient&apos;s Phone</span>
-                            </button>
-                        </div>
-                    )}
-
                     {/* Quick actions */}
                     <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.05s' }}>
                         <div className="flex flex-col md:flex-row gap-4">
@@ -519,56 +474,6 @@ export default function DashboardPage() {
                         patient={patient}
                         onSave={handleUpdatePatient}
                     />
-                )}
-
-                {/* Setup Patient Phone Modal */}
-                {showSetupModal && (
-                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={() => setShowSetupModal(false)}>
-                        <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
-                            <h2 className="text-xl font-bold text-gray-900 mb-2">Setup Patient&apos;s Phone</h2>
-                            <p className="text-gray-500 mb-6">
-                                Open this link on {patient?.name}&apos;s phone to enable Patient Mode
-                            </p>
-
-                            <div className="bg-gray-50 rounded-xl p-4 mb-4 break-all text-sm text-gray-600">
-                                {setupUrl}
-                            </div>
-
-                            <div className="flex gap-3 mb-6">
-                                <button
-                                    onClick={handleCopy}
-                                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors font-medium"
-                                >
-                                    <Icon name={copied ? 'check' : 'edit'} size={16} />
-                                    {copied ? 'Copied!' : 'Copy Link'}
-                                </button>
-
-                                <button
-                                    onClick={handleWhatsAppShare}
-                                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl transition-colors font-medium"
-                                >
-                                    <Icon name="message" size={16} />
-                                    Share WhatsApp
-                                </button>
-                            </div>
-
-                            <div className="bg-blue-50 rounded-xl p-4 mb-6">
-                                <p className="text-sm text-blue-800">
-                                    <strong>Instructions:</strong><br />
-                                    1. Open this link on patient&apos;s phone<br />
-                                    2. Tap &quot;Continue Setup&quot;<br />
-                                    3. Done! App will open in Patient Mode
-                                </p>
-                            </div>
-
-                            <button
-                                onClick={() => setShowSetupModal(false)}
-                                className="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors font-medium"
-                            >
-                                Close
-                            </button>
-                        </div>
-                    </div>
                 )}
             </PageTransition>
         </div>
