@@ -22,3 +22,4 @@ echo "  1. Stop the dev server (Ctrl+C)"
 echo "  2. Run: rm -rf .next node_modules/.cache"
 echo "  3. Run: npm run dev"
 
+

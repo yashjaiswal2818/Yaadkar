@@ -32,3 +32,4 @@ await faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/npm/@v
 
 
 
+

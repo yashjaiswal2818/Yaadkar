@@ -2,8 +2,7 @@
 
 import { useAuth } from '@/lib/auth-context';
 import { useRouter } from 'next/navigation';
-import { Brain, Award, Camera, Volume2, Users, ArrowRight, ExternalLink, Sparkles, Heart } from 'lucide-react';
-import Icon from '@/components/ui/Icon';
+import { Brain, Camera, Volume2, Users, ArrowRight, ExternalLink, Sparkles, Github, Linkedin } from 'lucide-react';
 
 export default function LandingPage() {
   const { user, loading, signInWithGoogle } = useAuth();
@@ -69,12 +68,8 @@ export default function LandingPage() {
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl" />
         </div>
-
         <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold mb-6 hover:bg-white/15 transition-colors">
-            <Award className="w-4 h-4" />
-            <span>TechSprint AI Hack &apos;25</span>
-          </div>
+          
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-4">
             <span className="bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent">
@@ -111,8 +106,7 @@ export default function LandingPage() {
             )}
 
             <div className="flex items-center gap-2 text-sm text-white/70 mt-2">
-              <Award className="w-4 h-4" />
-              <span>TechSprint AI Hack &apos;25 | Team 200</span>
+              <span>Code 200</span>
             </div>
           </div>
         </div>
@@ -248,7 +242,7 @@ export default function LandingPage() {
               </div>
               <div className="w-10 h-10 rounded-full bg-green-600 text-white font-bold flex items-center justify-center mx-auto mb-4 shadow-md">3</div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Hear</h4>
-              <p className="text-gray-600">&ldquo;This is Rahul, your son!&rdquo;</p>
+              <p className="text-gray-600">&ldquo;This is Yash, your grandson!&rdquo;</p>
             </div>
           </div>
         </div>
@@ -258,21 +252,36 @@ export default function LandingPage() {
       <footer className="py-12 px-4 bg-gray-900 text-gray-400">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-md">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
+
             <div>
               <span className="text-white font-semibold text-lg block">YaadKar (याद कर)</span>
             </div>
           </div>
           <p className="text-gray-300 mt-2 text-base">AI-powered face recognition for dementia care</p>
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mt-4">
-            <Award className="w-4 h-4" />
-            <span>Hackathon Project | TechSprint AI Hack &apos;25 | Team 200</span>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <a
+              href="https://github.com/yashjaiswal2818/Yaadkar.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105 active:scale-95"
+              aria-label="View on GitHub"
+            >
+              <Github className="w-5 h-5" />
+              <span className="font-medium">GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yash-jaiswal-093684344/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105 active:scale-95"
+              aria-label="Connect on LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+              <span className="font-medium">LinkedIn</span>
+            </a>
           </div>
-          <p className="text-xs text-gray-500 mt-4">
-            Built with Next.js, Firebase, Groq AI & Google Gemini
-          </p>
         </div>
       </footer>
     </div>
