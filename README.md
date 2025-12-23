@@ -2,7 +2,7 @@
 
 > **"Remember"** - Helping dementia patients recognize loved ones, one familiar face at a time.
 
-[![TechSprint AI Hack '25](https://img.shields.io/badge/Hackathon-TechSprint%20AI%20Hack%20'25-blue)](https://techsprint.ai)
+[![TechSprint AI Hack '25](https://img.shields.io/badge/Hackathon-TechSprint%20AI%20Hack%20'25-blue)](https://vision.hack2skill.com/event/gdgoc-25-techsprint-ai-hack-gdgpce?utm_source=hack2skill&utm_medium=homepage)
 [![Team](https://img.shields.io/badge/Team-Code%20200-green)](https://github.com/yashjaiswal2818/Yaadkar)
 [![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://yaadkar.vercel.app)
 
@@ -109,12 +109,10 @@
 - **One-tap recognition** - No navigation, no login required
 - **Voice output** - Hears who is in front of them in their preferred language
 - **Multi-language support** - Works in native Indian languages
-- **Offline face detection** - Works without internet connection
-- **Simple interface** - Large buttons, clear feedback, minimal cognitive load
+- - **Simple interface** - Large buttons, clear feedback, minimal cognitive load
 
 ### For Caregivers
 - **Add family members** - Upload photos, add relationship details and memories
-- **Recognition history** - See who was recognized and when with timestamps
 - **Conversation suggestions** - AI-generated talking points using Gemini
 - **Emergency SOS** - Quick access to emergency contacts
 - **Multi-language dashboard** - Manage in preferred language
